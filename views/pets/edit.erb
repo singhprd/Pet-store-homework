@@ -1,0 +1,24 @@
+<h2>Edit Pet:</h2>
+
+<form action="/pets/<%= @pet.id %>" method="post">
+
+  <label for="name">Name:</label>
+  <input type="text" name="name" value="<%= @pet.name %>"></input>
+
+  <label for="pet_type">Pet Type:</label>
+  <input type="text" name="pet_type" value="<%= @pet.pet_type %>" ></input>
+
+  <label for="image">Image:</label>
+  <input type="text" name="image" value="<%= @pet.image %>"></input>
+
+  <input type='submit' value="Update Pet">
+
+
+<label for="store_id">Select Store:</label>
+  <select name="store_id">
+    <% @stores.each do |store| %>
+      <option value="<%= store.id %>"><%= store.name %></option>
+    <% end %>
+  </select>
+
+</form>

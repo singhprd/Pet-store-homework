@@ -1,0 +1,21 @@
+<h2>Store Details</h2>
+<p>Name:</p>
+<%= @store.name %>
+
+<p>Address:</p>
+<%= @store.address %>
+
+<form action="/stores/<%= @store.id %>/delete" method="post">
+<input type="submit" value="Delete"> </input>
+</form>
+
+
+<p>Pets:</p>
+<% @pets.each do |pet| %>
+<p>
+<%= pet.name %>
+  </p>
+
+<% end %>
+
+<a href="/stores/<%= @store.id %>/edit ">Edit Store</a>

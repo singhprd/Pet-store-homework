@@ -1,0 +1,20 @@
+<h2>Pet Details</h2>
+
+<p>Name:</p>
+<%= @pet.name %>
+
+<p>Type:</p>
+<%= @pet.pet_type %>
+
+<p>Image:</p>
+<%= @pet.image %>
+
+<p>Store:</p>
+<%= @store.name %>
+
+<a href="/pets/<%= @pet.id %>/edit">Update/Delete</a>
+
+
+<form action="/pets/<%= @pet.id %>/delete" method="post">
+<input type="submit" value="Delete"> </input>
+</form>

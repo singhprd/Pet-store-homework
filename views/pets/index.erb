@@ -1,0 +1,12 @@
+
+<% @pets.each do |pet| %>
+  <a href="/pets/<%= pet.id %>">
+<p>Pet:</p>
+    <%= pet.name %>
+  </a>
+  <hr>
+<a href="/<%= pet.id %>"></a>
+<% end %>
+
+
+<a href="/pets/new">Add New pets</a>

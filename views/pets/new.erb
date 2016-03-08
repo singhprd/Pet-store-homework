@@ -1,0 +1,23 @@
+<h2>Create new Pet:</h2>
+
+<form action="/pets" method="post">
+
+  <label for="name">Name:</label>
+  <input type="text" name="name"></input>
+
+  <label for="pet_type">Pet Type:</label>
+  <input type="text" name="pet_type"></input>
+
+  <label for="image">Image:</label>
+  <input type="text" name="image"></input>
+
+  <input type='submit' value="Submit">
+
+<label for="store_id">Select Store:</label>
+  <select name="store_id">
+<% @stores.each do |store| %>
+      <option value="<%= store.id %> "><%= store.name %></option>
+<% end %>
+  </select>
+  
+</form>

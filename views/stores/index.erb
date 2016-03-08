@@ -1,0 +1,13 @@
+<% @stores.each do |store| %>
+<p>Store:</p>
+<p><a href="/stores/<%= store.id %>">
+    <%= store.name %>
+</a>
+  </p>
+<a href="/stores/<%= store.id %>/edit ">Edit Store</a>
+  <hr>
+<% end %>
+
+
+
+<a href="/stores/new">Add New Stores</a>
